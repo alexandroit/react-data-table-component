@@ -7,7 +7,7 @@
 [![npm monthly](https://img.shields.io/npm/dm/%40revivejs%2Freact-data-table-component.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/react-data-table-component)
 [![license](https://img.shields.io/npm/l/%40revivejs%2Freact-data-table-component.svg?style=flat-square)](https://github.com/alexandroit/react-data-table-component/blob/master/LICENSE)
 [![React 19](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
-[![TypeScript 5.7](https://img.shields.io/badge/TypeScript-5.7-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![TypeScript 5.9](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![GitHub stars](https://img.shields.io/github/stars/alexandroit/react-data-table-component.svg?style=flat-square)](https://github.com/alexandroit/react-data-table-component/stargazers)
 
 **[Documentation & Demo](https://alexandroit.github.io/react-data-table-component/)** | **[Repository](https://github.com/alexandroit/react-data-table-component)** | **[npm](https://www.npmjs.com/package/@revivejs/react-data-table-component)** | **[Changelog](https://github.com/alexandroit/react-data-table-component/blob/master/CHANGELOG.md)**
@@ -63,7 +63,8 @@ This repository is a React library, not an Angular package, so Angular-specific 
 
 | Package Version | React | TypeScript | Node.js |
 | :--- | :---: | :---: | :---: |
-| `9.x` | `19.x` | `5.7` | `>= 18.19` |
+| `9.1.x` | `19.x` | `5.9` | `>= 18.19` |
+| `9.0.x` | `19.x` | `5.7` | `>= 18.19` |
 | `8.x` | `18.x` | `5.7` | `>= 18.19` |
 | `7.x` | `17.x, 18.x` | `4.x - 5.x` | `>= 16.14` |
 
@@ -182,7 +183,7 @@ corepack yarn install
 npm run storybook
 ```
 
-The local Storybook demo runs on `http://localhost:6006/`, and the static docs build is generated into `docs/` for GitHub Pages.
+The local Storybook 9 demo runs on `http://localhost:6006/`, and the static docs build is generated into `docs/` for GitHub Pages.
 
 ---
 

@@ -217,6 +217,69 @@ export interface TableStyles {
 	};
 }
 
+export interface TableTheme {
+	table: {
+		style: CSSObject;
+	};
+	tableWrapper: {
+		style: CSSObject;
+	};
+	responsiveWrapper: {
+		style: CSSObject;
+	};
+	header: {
+		style: CSSObject;
+	};
+	subHeader: {
+		style: CSSObject;
+	};
+	head: {
+		style: CSSObject;
+	};
+	headRow: {
+		style: CSSObject;
+		denseStyle: CSSObject;
+	};
+	headCells: {
+		style: CSSObject;
+		draggingStyle: CSSObject;
+	};
+	contextMenu: {
+		style: CSSObject;
+		activeStyle: CSSObject;
+	};
+	cells: {
+		style: CSSObject;
+		draggingStyle: CSSObject;
+	};
+	rows: {
+		style: CSSObject;
+		selectedHighlightStyle: CSSObject;
+		denseStyle: CSSObject;
+		highlightOnHoverStyle: CSSObject;
+		stripedStyle: CSSObject;
+	};
+	expanderRow: {
+		style: CSSObject;
+	};
+	expanderCell: {
+		style: CSSObject;
+	};
+	expanderButton: {
+		style: CSSObject;
+	};
+	pagination: {
+		style: CSSObject;
+		pageButtonsStyle: CSSObject;
+	};
+	noData: {
+		style: CSSObject;
+	};
+	progress: {
+		style: CSSObject;
+	};
+}
+
 export interface PaginationOptions {
 	noRowsPerPage?: boolean;
 	rowsPerPageText?: string;

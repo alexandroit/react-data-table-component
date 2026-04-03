@@ -9,8 +9,8 @@ const Title = styled.div`
 	align-items: center;
 	flex: 1 0 auto;
 	height: 100%;
-	color: ${({ theme }) => theme.contextMenu.fontColor};
-	font-size: ${({ theme }) => theme.contextMenu.fontSize};
+	color: ${({ theme }) => theme.contextMenu.style.color};
+	font-size: ${({ theme }) => theme.contextMenu.style.fontSize};
 	font-weight: 400;
 `;
 

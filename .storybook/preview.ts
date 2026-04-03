@@ -50,3 +50,4 @@ export const globalTypes = {
 		defaultValue: 'light',
 	},
 };
+export const tags = ['autodocs'];

@@ -31,10 +31,6 @@ const config: StorybookConfig = {
 			},
 		},
 		{
-			name: '@storybook/addon-essentials',
-			options: {},
-		},
-		{
 			name: '@storybook/addon-a11y',
 			options: {
 				runOnly: {
@@ -44,10 +40,6 @@ const config: StorybookConfig = {
 			},
 		},
 	],
-
-	docs: {
-		autodocs: true,
-	},
 
 	framework: {
 		name: '@storybook/react-webpack5',

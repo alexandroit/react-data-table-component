@@ -1,8 +1,8 @@
 import merge from 'deepmerge';
 import { defaultThemes } from './themes';
-import { TableStyles, Theme, Themes } from './types';
+import { TableStyles, TableTheme, Theme, Themes } from './types';
 
-export const defaultStyles = (theme: Theme): TableStyles => ({
+export const defaultStyles = (theme: Theme): TableTheme => ({
 	table: {
 		style: {
 			color: theme.text.primary,
@@ -223,8 +223,8 @@ export const createStyles = (
 	customStyles: TableStyles = {},
 	themeName = 'default',
 	inherit: Themes = 'default',
-): TableStyles => {
+): TableTheme => {
 	const themeType = defaultThemes[themeName] ? themeName : inherit;
 
-	return merge(defaultStyles(defaultThemes[themeType]), customStyles);
+	return merge(defaultStyles(defaultThemes[themeType]), customStyles) as TableTheme;
 };

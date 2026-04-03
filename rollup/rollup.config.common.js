@@ -1,7 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import typescript from '@rollup/plugin-typescript';
 import visualizer from 'rollup-plugin-visualizer';
-import typescript from 'rollup-plugin-typescript2';
 
 export const plugins = [
 	resolve({
@@ -9,11 +9,17 @@ export const plugins = [
 		preferBuiltins: true,
 		extensions: ['.ts', '.tsx'],
 	}),
+	typescript({
+		tsconfig: './tsconfig.json',
+		noEmitOnError: true,
+		compilerOptions: {
+			noEmit: false,
+		},
+	}),
 	commonjs({
 		include: 'node_modules/**',
 	}),
 	visualizer(),
-	typescript(),
 ];
 
 export default {

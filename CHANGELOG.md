@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 9.1.0 - 2026-04-03
+
+- upgraded the docs and demo stack from Storybook 8.6 to Storybook 9.1 as the next supported major step
+- applied the Storybook 9 config and MDX automigrations, including the consolidated docs blocks imports
+- replaced the legacy Rollup TypeScript bridge with `@rollup/plugin-typescript` so package builds stay compatible with the upgraded toolchain
+- kept the package on the React 19 support line without introducing a new core-framework major
+
 ## 9.0.1 - 2026-04-03
 
 - upgraded the Storybook docs runtime from 7.x to 8.6 to restore compatibility with React 19

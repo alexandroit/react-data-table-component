@@ -19,8 +19,8 @@ const HeaderStyle = styled.div`
 
 const Title = styled.div`
 	flex: 1 0 auto;
-	color: ${({ theme }) => theme.header.fontColor};
-	font-size: ${({ theme }) => theme.header.fontSize};
+	color: ${({ theme }) => theme.header.style.color};
+	font-size: ${({ theme }) => theme.header.style.fontSize};
 	font-weight: 400;
 `;
 
