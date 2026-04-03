@@ -31,7 +31,7 @@ type SubheaderProps = {
 	children?: React.ReactNode;
 };
 
-const Subheader = ({ align = 'right', wrapContent = true, ...rest }: SubheaderProps): JSX.Element => (
+const Subheader = ({ align = 'right', wrapContent = true, ...rest }: SubheaderProps): React.JSX.Element => (
 	<SubheaderWrapper align={align} $wrapContent={wrapContent} {...rest} />
 );
 

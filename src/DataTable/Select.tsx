@@ -58,7 +58,7 @@ type SelectProps = {
 	children: React.ReactNode;
 };
 
-const Select = ({ defaultValue, onChange, ...rest }: SelectProps): JSX.Element => (
+const Select = ({ defaultValue, onChange, ...rest }: SelectProps): React.JSX.Element => (
 	<SelectWrapper>
 		<SelectControl onChange={onChange} defaultValue={defaultValue} {...rest} />
 		<DropDownIcon />

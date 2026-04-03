@@ -1,26 +1,15 @@
 import React from 'react';
 import doc from './linearProgressBar.mdx';
-import { makeStyles } from '@material-ui/core/styles';
-import LinearProgress from '@material-ui/core/LinearProgress';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 import data from '../../constants/sampleMovieData';
 import DataTable from '../../../src/index';
 
-const useStyles = makeStyles(theme => ({
-	root: {
-		width: '100%',
-		'& > * + *': {
-			marginTop: theme.spacing(2),
-		},
-	},
-}));
-
 const LinearIndeterminate = () => {
-	const classes = useStyles();
-
 	return (
-		<div className={classes.root}>
+		<Box sx={{ width: '100%', '& > * + *': { mt: 2 } }}>
 			<LinearProgress />
-		</div>
+		</Box>
 	);
 };
 

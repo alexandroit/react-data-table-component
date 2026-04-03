@@ -31,7 +31,7 @@ function Checkbox({
 	checked = false,
 	disabled = false,
 	onClick = noop,
-}: CheckboxProps): JSX.Element {
+}: CheckboxProps): React.JSX.Element {
 	const setCheckboxRef = (checkbox: HTMLInputElement) => {
 		if (checkbox) {
 			// eslint-disable-next-line no-param-reassign

@@ -27,7 +27,7 @@ function CellExpander<T>({
 	id,
 	onToggled,
 	disabled = false,
-}: CellExpanderProps<T>): JSX.Element {
+}: CellExpanderProps<T>): React.JSX.Element {
 	return (
 		<CellExpanderStyle onClick={(e: React.MouseEvent) => e.stopPropagation()} $noPadding>
 			<ExpanderButton

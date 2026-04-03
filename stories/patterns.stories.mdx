@@ -10,14 +10,13 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs';
 
 If you use React Data Table across your application and you are customizing or using custom components often you'll find you are repeating alot of code.
 
-The following pattern allows us to create a re-usable `DataTable` with our defaults baked in. In this case, we want to ensure all our tables are `dense` and have `pagination`, and finally let's override React Data Tables components with some material-ui sexiness:
+The following pattern allows us to create a re-usable `DataTable` with our defaults baked in. In this case, we want to ensure all our tables are `dense` and have `pagination`, and finally let's override React Data Tables components with some MUI polish:
 
 ```js
 import React from 'react';
 import DataTable from '@revivejs/react-data-table-component';
-import Checkbox from '@material-ui/core/Checkbox';
-
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
+import Checkbox from '@mui/material/Checkbox';
+import ArrowDownward from '@mui/icons-material/ArrowDownward';
 
 const sortIcon = <ArrowDownward />;
 const selectProps = { indeterminate: isIndeterminate => isIndeterminate };
@@ -60,8 +59,8 @@ We can do the same in TypeScript:
 ```ts
 import React from 'react';
 import DataTable, { TableProps } from '../../src/index';
-import Checkbox from '@material-ui/core/Checkbox';
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
+import Checkbox from '@mui/material/Checkbox';
+import ArrowDownward from '@mui/icons-material/ArrowDownward';
 
 const sortIcon = <ArrowDownward />;
 const selectProps = { indeterminate: (isIndeterminate: boolean) => isIndeterminate };

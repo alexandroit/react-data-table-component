@@ -118,7 +118,7 @@ function TableCol<T>({
 	onDragEnd,
 	onDragEnter,
 	onDragLeave,
-}: TableColProps<T>): JSX.Element | null {
+}: TableColProps<T>): React.JSX.Element | null {
 	React.useEffect(() => {
 		if (typeof column.selector === 'string') {
 			console.error(

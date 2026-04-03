@@ -21,19 +21,10 @@ import useDidUpdateEffect from '../hooks/useDidUpdateEffect';
 import { prop, getNumberOfPages, sort, isEmpty, isRowSelected, recalculatePage } from './util';
 import { defaultProps } from './defaultProps';
 import { createStyles } from './styles';
-import {
-	Action,
-	AllRowsAction,
-	SingleRowAction,
-	TableRow,
-	SortAction,
-	TableProps,
-	TableState,
-	SortOrder,
-} from './types';
+import { AllRowsAction, SingleRowAction, TableRow, SortAction, TableProps, TableState, SortOrder } from './types';
 import useColumns from '../hooks/useColumns';
 
-function DataTable<T>(props: TableProps<T>): JSX.Element {
+function DataTable<T>(props: TableProps<T>): React.JSX.Element {
 	const {
 		data = defaultProps.data,
 		columns = defaultProps.columns,
@@ -131,6 +122,19 @@ function DataTable<T>(props: TableProps<T>): JSX.Element {
 		defaultSortColumn,
 	} = useColumns(columns, onColumnOrderChange, defaultSortFieldId, defaultSortAsc);
 
+	const initialState: TableState<T> = {
+		allSelected: false,
+		selectedCount: 0,
+		selectedRows: [],
+		selectedColumn: defaultSortColumn,
+		toggleOnSelectedRowsChange: false,
+		sortDirection: defaultSortDirection,
+		currentPage: paginationDefaultPage,
+		rowsPerPage: paginationPerPage,
+		selectedRowsFlag: false,
+		contextMessage: defaultProps.contextMessage,
+	};
+
 	const [
 		{
 			rowsPerPage,
@@ -143,18 +147,7 @@ function DataTable<T>(props: TableProps<T>): JSX.Element {
 			toggleOnSelectedRowsChange,
 		},
 		dispatch,
-	] = React.useReducer<React.Reducer<TableState<T>, Action<T>>>(tableReducer, {
-		allSelected: false,
-		selectedCount: 0,
-		selectedRows: [],
-		selectedColumn: defaultSortColumn,
-		toggleOnSelectedRowsChange: false,
-		sortDirection: defaultSortDirection,
-		currentPage: paginationDefaultPage,
-		rowsPerPage: paginationPerPage,
-		selectedRowsFlag: false,
-		contextMessage: defaultProps.contextMessage,
-	});
+	] = React.useReducer(tableReducer<T>, initialState);
 
 	const { persistSelectedOnSort = false, persistSelectedOnPageChange = false } = paginationServerOptions;
 	const mergeSelections = !!(paginationServer && (persistSelectedOnPageChange || persistSelectedOnSort));

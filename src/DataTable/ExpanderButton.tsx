@@ -28,7 +28,7 @@ function ExpanderButton<T>({
 	id,
 	row,
 	onToggled,
-}: ExpanderButtonProps<T>): JSX.Element {
+}: ExpanderButtonProps<T>): React.JSX.Element {
 	const icon = expanded ? expandableIcon.expanded : expandableIcon.collapsed;
 	const handleToggle = () => onToggled && onToggled(row);
 

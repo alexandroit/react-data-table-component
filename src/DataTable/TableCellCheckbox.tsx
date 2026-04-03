@@ -37,7 +37,7 @@ function TableCellCheckbox<T>({
 	selectableRowsSingle,
 	selectableRowDisabled,
 	onSelectedRow,
-}: TableCellCheckboxProps<T>): JSX.Element {
+}: TableCellCheckboxProps<T>): React.JSX.Element {
 	const disabled = !!(selectableRowDisabled && selectableRowDisabled(row));
 
 	const handleOnRowSelected = () => {

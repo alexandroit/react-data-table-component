@@ -54,7 +54,7 @@ function Cell<T>({
 	onDragEnd,
 	onDragEnter,
 	onDragLeave,
-}: CellProps<T>): JSX.Element {
+}: CellProps<T>): React.JSX.Element {
 	const { conditionalStyle, classNames } = getConditionalStyle(row, column.conditionalCellStyles, ['rdt_TableCell']);
 
 	return (

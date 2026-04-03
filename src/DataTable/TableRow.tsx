@@ -136,7 +136,7 @@ function Row<T>({
 	onDragEnd,
 	onDragEnter,
 	onDragLeave,
-}: TableRowProps<T>): JSX.Element {
+}: TableRowProps<T>): React.JSX.Element {
 	const [expanded, setExpanded] = React.useState(defaultExpanded);
 
 	React.useEffect(() => {

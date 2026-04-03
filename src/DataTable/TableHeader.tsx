@@ -55,7 +55,7 @@ const Header = ({
 	selectedCount,
 	direction,
 	showMenu = true,
-}: HeaderProps): JSX.Element => (
+}: HeaderProps): React.JSX.Element => (
 	<HeaderStyle className="rdt_TableHeader" role="heading" aria-level={1}>
 		<Title>{title}</Title>
 		{actions && <Actions>{actions}</Actions>}

@@ -30,7 +30,7 @@ export const defaultProps = {
 	expandableRowsHideExpander: false,
 	expandOnRowDoubleClicked: false,
 	expandableInheritConditionalStyles: false,
-	expandableRowsComponent: function DefaultExpander(): JSX.Element {
+	expandableRowsComponent: function DefaultExpander(): React.JSX.Element {
 		return (
 			<div>
 				To add an expander pass in a component instance via <strong>expandableRowsComponent</strong>. You can then

@@ -25,7 +25,7 @@ function ExpanderRow<T>({
 	expanderComponentProps,
 	extendedRowStyle,
 	extendedClassNames,
-}: ExpanderRowProps<T>): JSX.Element {
+}: ExpanderRowProps<T>): React.JSX.Element {
 	// we need to strip of rdt_TableRow from extendedClassNames
 	const classNamesSplit = extendedClassNames.split(' ').filter(c => c !== 'rdt_TableRow');
 	const classNames = ['rdt_ExpanderRow', ...classNamesSplit].join(' ');

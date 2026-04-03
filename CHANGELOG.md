@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## 9.0.0 - 2026-04-03
+
+- upgraded the package to a React 19 support line
+- updated local React, React DOM, and React type packages for React 19 development and validation
+- replaced legacy Material UI v4 demo dependencies with MUI 7 and Emotion to remove outdated React peer conflicts in Storybook examples
+- updated the TypeScript JSX transform to `react-jsx`
+- refreshed the README compatibility table for the new `9.x` React 19 release line
+
 ## 8.0.0 - 2026-04-03
 
 - republished the package under the scoped name `@revivejs/react-data-table-component`

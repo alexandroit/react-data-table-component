@@ -69,16 +69,14 @@ function ContextMenu({
 	contextComponent,
 	selectedCount,
 	direction,
-}: ContextMenuProps): JSX.Element {
+}: ContextMenuProps): React.JSX.Element {
 	const isRTL = useRTL(direction);
 	const visible = selectedCount > 0;
 
 	if (contextComponent) {
-		return (
-			<ContextMenuStyle $visible={visible}>
-				{React.cloneElement(contextComponent as React.ReactElement, { selectedCount })}
-			</ContextMenuStyle>
-		);
+		const contextMenu = contextComponent as React.ReactElement<{ selectedCount: number }>;
+
+		return <ContextMenuStyle $visible={visible}>{React.cloneElement(contextMenu, { selectedCount })}</ContextMenuStyle>;
 	}
 
 	return (

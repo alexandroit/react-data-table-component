@@ -92,7 +92,7 @@ function Pagination({
 	paginationComponentOptions = defaultProps.paginationComponentOptions,
 	onChangeRowsPerPage = defaultProps.onChangeRowsPerPage,
 	onChangePage = defaultProps.onChangePage,
-}: PaginationProps): JSX.Element {
+}: PaginationProps): React.JSX.Element {
 	const windowSize = useWindowSize();
 	const isRTL = useRTL(direction);
 	const shouldShow = windowSize.width && windowSize.width > SMALL;

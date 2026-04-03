@@ -2,12 +2,12 @@ import { Story, Canvas } from '@storybook/addon-docs';
 
 # Make Our Table Material Design
 
-Let's override the built-in checkboxes and sort icon with some [Material Ui](https://material-ui.com) sexiness:
+Let's override the built-in checkboxes and sort icon with some [MUI](https://mui.com/material-ui/) polish:
 
 ```js
 ...
-import Checkbox from '@mataerial-ui/core/Checkbox';
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
+import Checkbox from '@mui/material/Checkbox';
+import ArrowDownward from '@mui/icons-material/ArrowDownward';
 
 ...
 
@@ -18,8 +18,8 @@ const MyComponent = () => (
     data={data}
     selectableRows
     selectableRowsComponent={Checkbox} // Pass the function only
-    selectableRowsComponentProps={{ inkDisabled: true }} // optionally, pass Material Ui supported props down to our custom checkbox
-    sortIcon={<ArrowDownward />} // use a material icon for our sort icon. rdt will rotate the icon 180 degrees for you
+    selectableRowsComponentProps={{ disableRipple: true }} // optionally, pass MUI-supported props down to our custom checkbox
+    sortIcon={<ArrowDownward />} // use an MUI icon for the sort icon. RDT will rotate it 180 degrees for you
   />
 );
 ```
@@ -32,13 +32,13 @@ Example Usage:
 
 ```js
 
-import Checkbox from '@mataerial-ui/core/Checkbox';
+import Checkbox from '@mui/material/Checkbox';
 
 ...
 
 /*
-  In this example, the Material Ui ui lib determines its own indeterminate state via the `indeterminate` property.
-  Let's override it using selectableRowsComponentProps`
+  In this example, MUI determines its own indeterminate state via the `indeterminate` property.
+  Let's override it using `selectableRowsComponentProps`
 */
 const selectProps = { indeterminate: isIndeterminate => isIndeterminate };
 

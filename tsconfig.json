@@ -14,7 +14,7 @@
 		"strict": true,
 		"sourceMap": true,
 		"baseUrl": "src",
-		"jsx": "react",
+		"jsx": "react-jsx",
 		"moduleResolution": "node",
 		"outDir": "dist",
 		"target": "es6",

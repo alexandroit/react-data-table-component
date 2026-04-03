@@ -37,7 +37,7 @@ function ColumnCheckbox<T>({
 	selectableRowsComponentProps,
 	selectableRowDisabled,
 	onSelectAllRows,
-}: ColumnCheckboxProps<T>): JSX.Element {
+}: ColumnCheckboxProps<T>): React.JSX.Element {
 	const indeterminate = selectedRows.length > 0 && !allSelected;
 	const rows = selectableRowDisabled ? rowData.filter((row: T) => !selectableRowDisabled(row)) : rowData;
 	const isDisabled = rows.length === 0;
