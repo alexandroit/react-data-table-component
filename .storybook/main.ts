@@ -3,7 +3,7 @@ import remarkGfm from 'remark-gfm';
 import type { StorybookConfig } from '@storybook/react-webpack5';
 
 const config: StorybookConfig = {
-	stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx|mdx)'],
+	stories: ['../stories/**/*.@(mdx|stories.@(ts|tsx|js|jsx))'],
 
 	typescript: {
 		check: false,
@@ -17,21 +17,17 @@ const config: StorybookConfig = {
 
 	addons: [
 		{
-      name: '@storybook/addon-docs',
-      options: {
-        mdxPluginOptions: {
-          mdxCompileOptions: {
-            remarkPlugins: [remarkGfm],
-          },
-        },
-      },
-    },
+			name: '@storybook/addon-webpack5-compiler-babel',
+			options: {},
+		},
 		{
-			name: '@storybook/addon-storysource',
+			name: '@storybook/addon-docs',
 			options: {
-				loaderOptions: {
-          prettierConfig: { printWidth: 80, singleQuote: true },
-        },
+				mdxPluginOptions: {
+					mdxCompileOptions: {
+						remarkPlugins: [remarkGfm],
+					},
+				},
 			},
 		},
 		{

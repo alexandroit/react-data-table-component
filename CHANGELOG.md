@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 9.0.1 - 2026-04-03
+
+- upgraded the Storybook docs runtime from 7.x to 8.6 to restore compatibility with React 19
+- migrated legacy `*.stories.mdx` docs pages to the Storybook 8-supported `.mdx` format
+- rebuilt the static `docs/` output so GitHub Pages no longer crashes on story unmount
+
 ## 9.0.0 - 2026-04-03
 
 - upgraded the package to a React 19 support line
