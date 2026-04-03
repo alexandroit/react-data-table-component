@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import doc from './remote.mdx';
-import axios from 'axios';
 import DataTable from '../../../src/index';
 
 const columns = [
@@ -30,10 +29,11 @@ export const Remote = () => {
 	const fetchUsers = async page => {
 		setLoading(true);
 
-		const response = await axios.get(`https://reqres.in/api/users?page=${page}&per_page=${perPage}&delay=1`);
+		const response = await fetch(`https://reqres.in/api/users?page=${page}&per_page=${perPage}&delay=1`);
+		const json = await response.json();
 
-		setData(response.data.data);
-		setTotalRows(response.data.total);
+		setData(json.data);
+		setTotalRows(json.total);
 		setLoading(false);
 	};
 
@@ -44,9 +44,10 @@ export const Remote = () => {
 	const handlePerRowsChange = async (newPerPage, page) => {
 		setLoading(true);
 
-		const response = await axios.get(`https://reqres.in/api/users?page=${page}&per_page=${newPerPage}&delay=1`);
+		const response = await fetch(`https://reqres.in/api/users?page=${page}&per_page=${newPerPage}&delay=1`);
+		const json = await response.json();
 
-		setData(response.data.data);
+		setData(json.data);
 		setPerPage(newPerPage);
 		setLoading(false);
 	};

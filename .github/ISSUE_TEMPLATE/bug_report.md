@@ -8,9 +8,9 @@ assignees: ''
 ---
 
 ## Issue Check list
-- [ ] Agree to the [Code of Conduct](https://github.com/jbetancur/react-data-table-component/blob/master/CODE-OF-CONDUCT.md)
+- [ ] Agree to the [Code of Conduct](https://github.com/alexandroit/react-data-table-component/blob/master/CODE-OF-CONDUCT.md)
 - [ ] Read the README
-- [ ] You are using React 16.8.0+
+- [ ] You are using React 17.0.0+
 - [ ] You installed `styled-components`
 - [ ] Include relevant code or preferably a [code sandbox](https://codesandbox.io/embed/react-data-table-sandbox-ccyuu
 )
