@@ -1,0 +1,15 @@
+<script>
+	(function () {
+		var search = window.location.search || '';
+		var hash = window.location.hash || '';
+		var params = new URLSearchParams(search);
+
+		if (params.has('path') || hash.indexOf('path=/') !== -1) {
+			return;
+		}
+
+		var next = new URL(window.location.href);
+		next.searchParams.set('path', '/docs/getting-started-introduction--docs');
+		window.location.replace(next.toString());
+	})();
+</script>
