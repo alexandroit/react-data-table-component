@@ -1,7 +1,7 @@
 {
   "name": "@revivejs/react-data-table-component",
-  "version": "9.1.0",
-  "description": "A maintained React 19-ready data table component with sorting, selection, expansion, pagination, and theming.",
+  "version": "9.1.1",
+  "description": "A maintained React 19 data table component with sorting, selection, expansion, pagination, theming, and versioned docs.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "browser": "dist/index.cjs.js",
@@ -17,12 +17,16 @@
   },
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "keywords": [
     "react",
     "react19",
     "react-table",
+    "react18",
+    "react19",
     "react-data-table",
     "react-data-table-component",
     "data-table",
@@ -37,6 +41,10 @@
     "sorting",
     "selectable-rows",
     "expandable-rows",
+    "conditional-row-styles",
+    "custom-themes",
+    "remote-pagination",
+    "versioned-docs",
     "responsive",
     "accessible",
     "npm-package",
@@ -52,7 +60,7 @@
   "bugs": {
     "url": "https://github.com/alexandroit/react-data-table-component/issues"
   },
-  "homepage": "https://github.com/alexandroit/react-data-table-component#readme",
+  "homepage": "https://alexandroit.github.io/react-data-table-component/",
   "author": "Alexandro Paixao Marques",
   "license": "Apache-2.0",
   "engines": {
@@ -62,12 +70,18 @@
     "access": "public"
   },
   "scripts": {
+    "clean": "rimraf dist docs/react-18 docs/react-19 storybook-static",
     "build:dev": "rollup -c rollup/rollup.config.dev.js -m",
     "build:umd": "rollup -c rollup/rollup.config.umd.js",
     "build:cjs": "rollup -c rollup/rollup.config.cjs.js",
     "build:es": "rollup -c rollup/rollup.config.es.js",
     "build": "rimraf dist && npm run build:dev && npm run build:cjs && npm run build:umd && npm run build:es",
-    "build:docs": "rimraf docs && storybook build --output-dir docs",
+    "docs:install:react-18": "cd docs-src/react-18 && npm install",
+    "docs:install:react-19": "cd docs-src/react-19 && npm install",
+    "build:docs:react-18": "cd docs-src/react-18 && npm run build",
+    "build:docs:react-19": "cd docs-src/react-19 && npm run build",
+    "build:docs": "npm run build:docs:react-19",
+    "build:docs:storybook": "rimraf storybook-static && storybook build --output-dir storybook-static",
     "start": "npm run build:dev -- -w",
     "test": "jest --passWithNoTests --verbose --coverage",
     "test:tdd": "jest --watch",
@@ -75,7 +89,7 @@
     "test:coverage": "jest --coverage",
     "lint": "eslint . --ext .ts,.tsx && eslint . --ext .js --config eslintrc-js.js",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "npm run build:docs",
+    "build-storybook": "npm run build:docs:storybook",
     "pack:check": "npm run build && npm pack --dry-run",
     "publish:npm": "npm run build && npm publish --access public",
     "prepublishOnly": "npm run build"

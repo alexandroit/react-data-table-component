@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 9.1.1 - 2026-04-05
+
+- replaced the single Storybook-only static site with versioned `docs-src/react-18` and `docs-src/react-19` demo apps
+- rebuilt GitHub Pages into `docs/react-18` and `docs/react-19` with a version selector at `docs/index.html`
+- refreshed the root README and package metadata so the npm page follows the maintained ReviveJS docs pattern
+- kept Storybook available for local authoring while moving the published docs flow to the versioned apps
+
 ## 9.1.0 - 2026-04-03
 
 - upgraded the docs and demo stack from Storybook 8.6 to Storybook 9.1 as the next supported major step
