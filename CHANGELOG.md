@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - replaced the single Storybook-only static site with versioned `docs-src/react-18` and `docs-src/react-19` demo apps
 - rebuilt GitHub Pages into `docs/react-18` and `docs/react-19` with a version selector at `docs/index.html`
-- refreshed the root README and package metadata so the npm page follows the maintained ReviveJS docs pattern
+- refreshed the root README and package metadata so the npm page follows the maintained Stackline docs pattern
 - kept Storybook available for local authoring while moving the published docs flow to the versioned apps
 
 ## 9.1.0 - 2026-04-03
@@ -32,7 +32,7 @@ All notable changes to this project will be documented in this file.
 
 ## 8.0.0 - 2026-04-03
 
-- republished the package under the scoped name `@revivejs/react-data-table-component`
+- republished the package under the scoped name `@stackline/react-data-table-component`
 - normalized npm metadata, repository links, issue links, and documentation links for the maintained repository
 - switched the static docs build to output directly into `docs/` for GitHub Pages
 - removed stale funding and Netlify publication references from the repository

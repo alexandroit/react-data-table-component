@@ -1,20 +1,20 @@
-# @revivejs/react-data-table-component
+# @stackline/react-data-table-component
 
 > A maintained **React 19 data table component** with sorting, selection, expandable rows, pagination, theming, and versioned live demos for each maintained React release line.
 
-[![npm version](https://img.shields.io/npm/v/@revivejs/react-data-table-component.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/react-data-table-component)
-[![npm downloads](https://img.shields.io/npm/dt/@revivejs/react-data-table-component.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/react-data-table-component)
-[![license](https://img.shields.io/npm/l/@revivejs/react-data-table-component.svg?style=flat-square)](https://github.com/alexandroit/react-data-table-component/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@stackline/react-data-table-component.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/react-data-table-component)
+[![npm downloads](https://img.shields.io/npm/dt/@stackline/react-data-table-component.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/react-data-table-component)
+[![license](https://img.shields.io/npm/l/@stackline/react-data-table-component.svg?style=flat-square)](https://github.com/alexandroit/react-data-table-component/blob/master/LICENSE)
 [![React 19](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![Styled Components](https://img.shields.io/badge/styled--components-6-db7093?style=flat-square)](https://styled-components.com)
 
-**[Documentation & Live Demos](https://alexandroit.github.io/react-data-table-component/)** | **[npm](https://www.npmjs.com/package/@revivejs/react-data-table-component)** | **[Issues](https://github.com/alexandroit/react-data-table-component/issues)** | **[Repository](https://github.com/alexandroit/react-data-table-component)**
+**[Documentation & Live Demos](https://alexandroit.github.io/react-data-table-component/)** | **[npm](https://www.npmjs.com/package/@stackline/react-data-table-component)** | **[Issues](https://github.com/alexandroit/react-data-table-component/issues)** | **[Repository](https://github.com/alexandroit/react-data-table-component)**
 
 **Latest version:** `9.1.1`
 
 ## Why this library?
 
-`@revivejs/react-data-table-component` keeps the familiar API of the original data table library while standardizing package metadata, release stewardship, and versioned documentation under the maintained ReviveJS repository.
+`@stackline/react-data-table-component` keeps the familiar API of the original data table library while standardizing package metadata, release stewardship, and versioned documentation under the maintained Stackline repository.
 
 The component stays intentionally declarative:
 
@@ -25,21 +25,26 @@ The component stays intentionally declarative:
 
 ## React Version Compatibility
 
-| Package version | React version | Styled Components | Demo link |
-| :---: | :---: | :---: | :--- |
-| **9.1.1** | **19.2.x** | **6.1.x** | [React 19 demo](https://alexandroit.github.io/react-data-table-component/react-19/) |
-| **8.0.0** | **18.3.x** | **6.1.x** | [React 18 demo](https://alexandroit.github.io/react-data-table-component/react-18/) |
+Each package family only installs on its matching React family. Framework major and package major are not always the same package number, so use the package family column below.
+
+| Package family | Framework family | Peer range | Tested release window | Demo link |
+| :---: | :---: | :---: | :---: | :--- |
+| **9.x** | **React 19 only** | **`>=19.0.0 <20.0.0`** | **19.0.0 -> 19.2.5** | [React 19 family docs](https://alexandroit.github.io/react-data-table-component/react-19/) |
+| **8.x** | **React 18 only** | **`>=18.0.0 <19.0.0`** | **18.0.0 -> 18.3.1** | [React 18 family docs](https://alexandroit.github.io/react-data-table-component/react-18/) |
+
 
 ## Installation
 
 ```bash
-npm install @revivejs/react-data-table-component styled-components
+npm install @stackline/react-data-table-component styled-components
 ```
+
+Choose the package family from the compatibility table above. Each published family is locked to one framework major only.
 
 ## Basic Usage
 
 ```tsx
-import DataTable, { type TableColumn } from '@revivejs/react-data-table-component';
+import DataTable, { type TableColumn } from '@stackline/react-data-table-component';
 
 type Movie = {
   id: number;
@@ -135,7 +140,7 @@ const [perPage, setPerPage] = useState(10);
 ### Custom themes
 
 ```tsx
-import DataTable, { createTheme } from '@revivejs/react-data-table-component';
+import DataTable, { createTheme } from '@stackline/react-data-table-component';
 
 createTheme(
   'revive-slate',
@@ -185,7 +190,7 @@ createTheme(
 
 ## Versioned Docs
 
-This repository now follows the versioned documentation pattern used across maintained ReviveJS component projects:
+This repository now follows the versioned documentation pattern used across maintained Stackline component projects:
 
 - source docs apps live in `docs-src/react-18` and `docs-src/react-19`
 - compiled static builds live in `docs/react-18` and `docs/react-19`

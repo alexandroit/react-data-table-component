@@ -16,7 +16,7 @@ import DataTable, {
   type PaginationComponentProps,
   type TableColumn,
   type TableStyles
-} from '@revivejs/react-data-table-component';
+} from '@stackline/react-data-table-component';
 import sampleDessertsSource from '../../../stories/constants/sampleDesserts';
 import sampleMovieDataSource from '../../../stories/constants/sampleMovieData';
 
@@ -76,9 +76,9 @@ createTheme(
   'dark'
 );
 
-const INSTALL_CODE = `npm install @revivejs/react-data-table-component styled-components`;
+const INSTALL_CODE = `npm install @stackline/react-data-table-component@9 styled-components`;
 
-const SETUP_CODE = `import DataTable, { type TableColumn } from '@revivejs/react-data-table-component';\n\nconst columns: TableColumn<Row>[] = [\n  { name: 'Name', selector: row => row.name, sortable: true }\n];`;
+const SETUP_CODE = `import DataTable, { type TableColumn } from '@stackline/react-data-table-component';\n\nconst columns: TableColumn<Row>[] = [\n  { name: 'Name', selector: row => row.name, sortable: true }\n];`;
 
 const RENDER_CODE = `<DataTable columns={columns} data={rows} pagination />`;
 
@@ -1782,7 +1782,7 @@ export function App({ reactLine, packageLine, docsPath }: AppProps) {
       <section className="hero">
         <div className="hero-card">
           <span className="badge">React {reactLine} • package {packageLine}</span>
-          <h1>@revivejs/react-data-table-component</h1>
+          <h1>@stackline/react-data-table-component</h1>
           <p>
             A maintained React data table component with the full example tree rebuilt in versioned docs:
             sorting, pagination, selection, expansion, custom styles, performance patterns, and UI-library

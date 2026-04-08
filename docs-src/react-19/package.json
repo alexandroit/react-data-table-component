@@ -1,5 +1,5 @@
 {
-  "name": "@revivejs/react-data-table-component-docs-react19",
+  "name": "@stackline/react-data-table-component-docs-react19",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@revivejs/react-data-table-component": "9.1.1",
+    "@stackline/react-data-table-component": "9.1.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "styled-components": "6.1.15"

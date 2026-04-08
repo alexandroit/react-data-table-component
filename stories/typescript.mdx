@@ -7,7 +7,7 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 React Data Table is built with TypeScript so typings are buit in. First, we'll need to define our data type (or interface):
 
 ```ts
-import DataTable, { TableColumn } from '@revivejs/react-data-table-component';
+import DataTable, { TableColumn } from '@stackline/react-data-table-component';
 
 interface DataRow {
 	title: string;
@@ -19,7 +19,7 @@ interface DataRow {
 Alternatively, if you want to define `DataRow` as a type:
 
 ```ts
-import DataTable, { TableColumn } from '@revivejs/react-data-table-component';
+import DataTable, { TableColumn } from '@stackline/react-data-table-component';
 
 type DataRow = {
 	title: string;
@@ -67,7 +67,7 @@ const MyComponent: React.FC = () => {
 Putting it all together:
 
 ```ts
-import DataTable, { TableColumn } from '@revivejs/react-data-table-component';
+import DataTable, { TableColumn } from '@stackline/react-data-table-component';
 
 interface DataRow {
 	title: string;

@@ -1,0 +1,15 @@
+{
+  "name": "@stackline/react-data-table-component-docs-react19-19-1-5",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate": "node ./stackline-validate.mjs"
+  },
+  "dependencies": {
+    "@stackline/react-data-table-component": "file:../../..",
+    "react": "19.1.5",
+    "react-dom": "19.1.5",
+    "styled-components": "6.1.15"
+  },
+  "devDependencies": {}
+}
