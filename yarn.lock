@@ -2499,9 +2499,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@revivejs/react-data-table-component@workspace:.":
+"@stackline/react-data-table-component@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@revivejs/react-data-table-component@workspace:."
+  resolution: "@stackline/react-data-table-component@workspace:."
   dependencies:
     "@babel/core": "npm:^7.26.9"
     "@babel/eslint-parser": "npm:^7.26.8"
@@ -2569,7 +2569,7 @@ __metadata:
     tslib: "npm:2.8.1"
     typescript: "npm:5.9.3"
   peerDependencies:
-    react: ^18.3.0 || ^19.0.0
+    react: >=19.0.0 <20.0.0
     styled-components: ">=5.0.0 <7.0.0"
   peerDependenciesMeta:
     styled-components:

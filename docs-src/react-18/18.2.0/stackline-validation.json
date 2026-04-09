@@ -1,0 +1,20 @@
+{
+  "packageName": "@stackline/react-data-table-component",
+  "projectRoot": "react-data-table-component/react-data-table-component",
+  "family": "react-18",
+  "framework": "react",
+  "exactVersion": "18.2.0",
+  "releaseRoot": "react-data-table-component/react-data-table-component/docs-src/react-18/18.2.0",
+  "build": null,
+  "install": {
+    "success": true,
+    "command": "npm install --ignore-scripts"
+  },
+  "validate": {
+    "success": false,
+    "command": "npm run validate",
+    "output": "> @stackline/react-data-table-component-docs-react18-18-2-0@1.0.0 validate\n> node ./stackline-validate.mjs\n\n\nfile:///tmp/stackline-release-18.2.0-yiWMZf/stackline-run-release-smoke.mjs:48\n      throw new Error(`Expected export \"${exportName}\" was not found in ${packageName}.`);\n            ^\n\nError: Expected export \"default\" was not found in @stackline/react-data-table-component.\n    at validateExpectedExports (file:///tmp/stackline-release-18.2.0-yiWMZf/stackline-run-release-smoke.mjs:48:13)\n    at validateJavascriptRelease (file:///tmp/stackline-release-18.2.0-yiWMZf/stackline-run-release-smoke.mjs:68:3)\n    at async validateRelease (file:///tmp/stackline-release-18.2.0-yiWMZf/stackline-run-release-smoke.mjs:77:5)\n    at async file:///tmp/stackline-release-18.2.0-yiWMZf/stackline-validate.mjs:6:1\n\nNode.js v20.20.2"
+  },
+  "success": false,
+  "generatedAt": "2026-04-09T01:56:49.606Z"
+}
