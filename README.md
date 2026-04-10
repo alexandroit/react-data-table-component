@@ -143,7 +143,7 @@ const [perPage, setPerPage] = useState(10);
 import DataTable, { createTheme } from '@stackline/react-data-table-component';
 
 createTheme(
-  'revive-slate',
+  'modernize-slate',
   {
     text: {
       primary: '#f7fbff',

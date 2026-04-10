@@ -21,7 +21,7 @@ import sampleDessertsSource from '../../../stories/constants/sampleDesserts';
 import sampleMovieDataSource from '../../../stories/constants/sampleMovieData';
 
 createTheme(
-  'reviveSlate',
+  'stacklineSlate',
   {
     text: {
       primary: '#f7fbff',
@@ -47,7 +47,7 @@ createTheme(
 );
 
 createTheme(
-  'reviveSolarized',
+  'stacklineSolarized',
   {
     text: {
       primary: '#268bd2',
@@ -104,7 +104,7 @@ const CUSTOM_CELLS_CODE = `<DataTable columns={[{ name: 'Title', cell: row => <d
 const CONDITIONAL_ROWS_CODE = `<DataTable conditionalRowStyles={conditionalRowStyles} pagination />`;
 const LOADING_CODE = `<DataTable progressPending={pending} progressComponent={<CustomLoader />} pagination />`;
 const THEME_CODE = `<DataTable theme="dark" selectableRows expandableRows pagination />`;
-const CUSTOM_THEME_CODE = `createTheme('reviveSolarized', customTheme, 'dark');\n<DataTable theme="reviveSolarized" />`;
+const CUSTOM_THEME_CODE = `createTheme('stacklineSolarized', customTheme, 'dark');\n<DataTable theme="stacklineSolarized" />`;
 const CUSTOM_STYLES_CODE = `<DataTable customStyles={customStyles} highlightOnHover pointerOnHover />`;
 const PERFORMANCE_CODE = `const columns = useMemo(() => [...], []);\n<DataTable columns={columns} onSelectedRowsChange={handleChange} />`;
 const UI_TABLE_CODE = `<DataTable actions={toolbar} contextActions={bulkActions} sortIcon={<span>↓</span>} />`;
@@ -1411,7 +1411,7 @@ function ThemingCustomDemo() {
       title="Custom theme"
       columns={movieColumns}
       data={movieRows}
-      theme="reviveSolarized"
+      theme="stacklineSolarized"
       selectableRows
       highlightOnHover
       pagination
