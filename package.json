@@ -59,7 +59,7 @@
   "bugs": {
     "url": "https://github.com/alexandroit/react-data-table-component/issues"
   },
-  "homepage": "https://alexandroit.github.io/react-data-table-component/",
+  "homepage": "https://alexandro.net/docs/react/react-data-table-component/",
   "author": "Alexandro Paixao Marques",
   "license": "Apache-2.0",
   "engines": {

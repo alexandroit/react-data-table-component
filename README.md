@@ -8,7 +8,7 @@
 [![React 19](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![Styled Components](https://img.shields.io/badge/styled--components-6-db7093?style=flat-square)](https://styled-components.com)
 
-**[Documentation & Live Demos](https://alexandroit.github.io/react-data-table-component/)** | **[npm](https://www.npmjs.com/package/@stackline/react-data-table-component)** | **[Issues](https://github.com/alexandroit/react-data-table-component/issues)** | **[Repository](https://github.com/alexandroit/react-data-table-component)**
+**[Documentation & Live Demos](https://alexandro.net/docs/react/react-data-table-component/)** | **[npm](https://www.npmjs.com/package/@stackline/react-data-table-component)** | **[Issues](https://github.com/alexandroit/react-data-table-component/issues)** | **[Repository](https://github.com/alexandroit/react-data-table-component)**
 
 **Latest version:** `9.1.1`
 
@@ -29,8 +29,8 @@ Each package family only installs on its matching React family. Framework major 
 
 | Package family | Framework family | Peer range | Tested release window | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
-| **9.x** | **React 19 only** | **`>=19.0.0 <20.0.0`** | **19.0.0 -> 19.2.5** | [React 19 family docs](https://alexandroit.github.io/react-data-table-component/react-19/) |
-| **8.x** | **React 18 only** | **`>=18.0.0 <19.0.0`** | **18.0.0 -> 18.3.1** | [React 18 family docs](https://alexandroit.github.io/react-data-table-component/react-18/) |
+| **9.x** | **React 19 only** | **`>=19.0.0 <20.0.0`** | **19.0.0 -> 19.2.5** | [React 19 family docs](https://alexandro.net/docs/react/react-data-table-component/react-19/) |
+| **8.x** | **React 18 only** | **`>=18.0.0 <19.0.0`** | **18.0.0 -> 18.3.1** | [React 18 family docs](https://alexandro.net/docs/react/react-data-table-component/react-18/) |
 
 
 ## Installation
