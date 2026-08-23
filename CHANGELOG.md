@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Moved exact-version dependency records to `package.fixture.json`, repaired
+  their validators, and added an offline catalog contract to keep historical
+  metadata out of active dependency alerts.
 - Added checked-in CI and manual npm provenance release workflows for Node.js
   22 and 24.
 - Added a package-specific security policy and included it in release tarballs.

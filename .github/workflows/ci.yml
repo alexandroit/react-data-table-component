@@ -30,6 +30,9 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: corepack enable
       - run: yarn install --immutable
+      - name: Validate compatibility fixture catalog
+        if: matrix.node == '22.22.3'
+        run: yarn test:fixtures
       - run: yarn lint
       - run: yarn test
       - run: yarn build
