@@ -5,6 +5,15 @@ type ThemeMapping = {
 	[propertyName: string]: Theme;
 };
 
+const unsafeThemeNames = new Set(['__proto__', 'prototype', 'constructor']);
+const hasOwnTheme = (name: string): boolean => Object.prototype.hasOwnProperty.call(defaultThemes, name);
+
+function assertSafeThemeName(name: string): void {
+	if (unsafeThemeNames.has(name)) {
+		throw new TypeError(`Unsafe theme name: ${name}`);
+	}
+}
+
 const defaultTheme = {
 	text: {
 		primary: 'rgba(0, 0, 0, 0.87)',
@@ -82,12 +91,22 @@ export const defaultThemes: ThemeMapping = {
 };
 
 export function createTheme<T>(name = 'default', customTheme?: T, inherit: Themes = 'default'): Theme {
-	if (!defaultThemes[name]) {
-		defaultThemes[name] = merge(defaultThemes[inherit], customTheme || {});
+	assertSafeThemeName(name);
+	assertSafeThemeName(inherit);
+
+	if (!hasOwnTheme(inherit)) {
+		throw new TypeError(`Unknown inherited theme: ${inherit}`);
 	}
 
-	// allow tweaking default or light themes if the theme passed in matches
-	defaultThemes[name] = merge(defaultThemes[name], customTheme || {});
+	const baseTheme = hasOwnTheme(name) ? defaultThemes[name] : merge(defaultThemes[inherit], customTheme || {});
+	const nextTheme = merge(baseTheme, customTheme || {});
 
-	return defaultThemes[name];
+	Object.defineProperty(defaultThemes, name, {
+		configurable: true,
+		enumerable: true,
+		value: nextTheme,
+		writable: true,
+	});
+
+	return nextTheme;
 }

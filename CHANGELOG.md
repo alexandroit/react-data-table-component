@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Rejected prototype-sensitive theme names and added regression coverage for
+  malicious custom-theme input without changing valid theme behavior.
 - Updated every supported React documentation app to the patched Vite 8.2
   toolchain, added reproducible lockfiles, and made CI build and audit both
   React 18 and React 19 demos.

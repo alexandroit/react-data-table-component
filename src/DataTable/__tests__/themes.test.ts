@@ -18,4 +18,17 @@ describe('createTheme', () => {
 
 		expect(defaultThemes.wow).toEqual(newTheme);
 	});
+
+	test.each(['__proto__', 'prototype', 'constructor'])('it rejects the unsafe theme name %s', name => {
+		expect(() => createTheme(name, { polluted: true })).toThrow(/Unsafe theme name/);
+		expect((Object.prototype as { polluted?: boolean }).polluted).toBeUndefined();
+	});
+
+	test('it does not copy prototype keys from custom theme input', () => {
+		const maliciousTheme = JSON.parse('{"__proto__":{"polluted":true}}');
+
+		createTheme('security-regression', maliciousTheme);
+
+		expect((Object.prototype as { polluted?: boolean }).polluted).toBeUndefined();
+	});
 });
