@@ -65,8 +65,7 @@ dist/*
 storybook-static
 
 # only support Yarn
-package-lock.json
-docs-src/**/package-lock.json
+/package-lock.json
 .DS_Store
 .vscode
 .idea

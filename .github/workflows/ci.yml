@@ -37,6 +37,15 @@ jobs:
       - run: yarn test
       - run: yarn build
       - run: yarn npm audit --all --recursive --severity high
+      - name: Build and audit supported React documentation
+        if: matrix.node == '22.22.3'
+        run: |
+          npm ci --prefix docs-src/react-18
+          npm run build:docs:react-18
+          npm audit --prefix docs-src/react-18 --audit-level=low
+          npm ci --prefix docs-src/react-19
+          npm run build:docs:react-19
+          npm audit --prefix docs-src/react-19 --audit-level=low
       - name: Build release artifact
         if: matrix.node == '22.22.3'
         run: |
