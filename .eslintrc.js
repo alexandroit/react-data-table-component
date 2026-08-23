@@ -44,6 +44,12 @@ module.exports = {
 	},
 	overrides: [
 		{
+			files: ['**/*.d.ts'],
+			rules: {
+				'@typescript-eslint/no-empty-object-type': 'off',
+			},
+		},
+		{
 			files: ['**/*.js', '**/*.jsx'],
 			rules: {
 				'@typescript-eslint/no-var-requires': 'off',

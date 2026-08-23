@@ -1,5 +1,8 @@
-import config, { plugins } from './rollup.config.common';
-import pkg from '../package.json';
+import config, { plugins } from './rollup.config.common.js';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+const pkg = require('../package.json');
 
 const packageName = pkg.name.split('/').pop();
 

@@ -1,5 +1,5 @@
-import { terser } from 'rollup-plugin-terser';
-import config, { plugins } from './rollup.config.common';
+import terser from '@rollup/plugin-terser';
+import config, { plugins } from './rollup.config.common.js';
 
 export default Object.assign(config, {
 	output: [
@@ -15,6 +15,7 @@ export default Object.assign(config, {
 				deepmerge: 'deepmerge',
 			},
 			exports: 'named',
+			sourcemap: true,
 		},
 	],
 	plugins: plugins.concat([terser()]),

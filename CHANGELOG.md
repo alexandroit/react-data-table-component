@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+- Added checked-in CI and manual npm provenance release workflows for Node.js
+  22 and 24.
+- Added a package-specific security policy and included it in release tarballs.
+- Repaired the invalid Yarn lockfile and stopped tracking Yarn's local install
+  state cache.
+- Upgraded the build to Rollup 4 and the maintained official terser plugin.
+- Refreshed vulnerable development dependencies while preserving all 230 tests
+  and the public React 19 package API.
+
 ## 9.1.1 - 2026-04-05
 
 - replaced the single Storybook-only static site with versioned `docs-src/react-18` and `docs-src/react-19` demo apps

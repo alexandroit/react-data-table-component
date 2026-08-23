@@ -217,9 +217,18 @@ If you still want the legacy authoring environment for story development, Storyb
 npm run storybook
 ```
 
+## Security
+
+Report vulnerabilities privately by following [SECURITY.md](SECURITY.md). Do
+not disclose exploit details in a public issue.
+
 ## Changelog
 
 See [CHANGELOG.md](https://github.com/alexandroit/react-data-table-component/blob/master/CHANGELOG.md).
+
+## License
+
+Licensed under the Apache License 2.0. See [LICENSE](LICENSE).
 
 ## Credits
 
