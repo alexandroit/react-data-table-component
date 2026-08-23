@@ -6,12 +6,16 @@ type ThemeMapping = {
 };
 
 const unsafeThemeNames = new Set(['__proto__', 'prototype', 'constructor']);
-const hasOwnTheme = (name: string): boolean => Object.prototype.hasOwnProperty.call(defaultThemes, name);
 
 function assertSafeThemeName(name: string): void {
 	if (unsafeThemeNames.has(name)) {
 		throw new TypeError(`Unsafe theme name: ${name}`);
 	}
+}
+
+function getOwnTheme(name: string): Theme | undefined {
+	const descriptor = Object.getOwnPropertyDescriptor(defaultThemes, name);
+	return descriptor ? (descriptor.value as Theme) : undefined;
 }
 
 const defaultTheme = {
@@ -94,11 +98,13 @@ export function createTheme<T>(name = 'default', customTheme?: T, inherit: Theme
 	assertSafeThemeName(name);
 	assertSafeThemeName(inherit);
 
-	if (!hasOwnTheme(inherit)) {
+	const inheritedTheme = getOwnTheme(inherit);
+	if (!inheritedTheme) {
 		throw new TypeError(`Unknown inherited theme: ${inherit}`);
 	}
 
-	const baseTheme = hasOwnTheme(name) ? defaultThemes[name] : merge(defaultThemes[inherit], customTheme || {});
+	const currentTheme = getOwnTheme(name);
+	const baseTheme = currentTheme || merge(inheritedTheme, customTheme || {});
 	const nextTheme = merge(baseTheme, customTheme || {});
 
 	Object.defineProperty(defaultThemes, name, {
